@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "9db571f5-9681-4f6f-8c8e-f75d06441ab2",
+		"name": "Go Business Opening Hours",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Status Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/status/ping",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"status",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Businesses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/businesses",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"businesses"
+					],
+					"query": [
+						{
+							"key": "open",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "local_time",
+							"value": "2022-07-09T00:15",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080"
+		}
+	]
+}
